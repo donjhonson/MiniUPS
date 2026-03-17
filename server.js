@@ -8,11 +8,11 @@ const querystring = require('querystring');
 const PORT = 8000;
 const PROJECT_DIR = __dirname.replace('assets/api', '');
 
-// Telegram settings
+
 const TELEGRAM_BOT_TOKEN = '8237955977:AAFJNa1HWuf369o47hfn63grkvpL77Ilfo8';
 const TELEGRAM_CHAT_ID = '@miniups5';
 
-// MIME типы
+
 const mimeTypes = {
     '.html': 'text/html',
     '.css': 'text/css',
