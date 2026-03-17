@@ -6,7 +6,7 @@ const url = require('url');
 const querystring = require('querystring');
 
 const PORT = 8000;
-const PROJECT_DIR = __dirname.replace('/assets/api', '');
+const PROJECT_DIR = __dirname.replace('assets/api', '');
 
 // Telegram settings
 const TELEGRAM_BOT_TOKEN = '8237955977:AAFJNa1HWuf369o47hfn63grkvpL77Ilfo8';
@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
     let fileName = parsedUrl.pathname;
     
     // Обработка API запроса для отправки заказа
-    if (fileName === '/assets/api/send_order.php' && req.method === 'POST') {
+    if (fileName === 'assets/api/send_order.php' && req.method === 'POST') {
         let body = '';
         
         req.on('data', chunk => {
@@ -118,7 +118,7 @@ const server = http.createServer((req, res) => {
     }
     
     // Обработка просмотра заказов
-    if (fileName === '/assets/api/view_orders.php' || fileName === '/orders') {
+    if (fileName === 'assets/api/view_orders.php' || fileName === '/orders') {
         const logsFile = path.join(PROJECT_DIR, 'assets', 'api', 'orders_log.json');
         let logs = [];
         
